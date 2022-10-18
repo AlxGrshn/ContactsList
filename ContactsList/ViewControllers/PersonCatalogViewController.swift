@@ -9,7 +9,7 @@ import UIKit
 
 class PersonCatalogViewController: UITableViewController {
    
-    var personCatalog: [Person]!
+    var personList: [Person]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class PersonCatalogViewController: UITableViewController {
 
     //MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        personCatalog.count
+        personList.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +30,7 @@ class PersonCatalogViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catalog", for: indexPath)
-        let person = personCatalog[indexPath.row]
+        let person = personList[indexPath.row]
         var content = cell.defaultContentConfiguration()
         
         content.text = person.phoneNumber

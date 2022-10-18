@@ -9,11 +9,11 @@ import UIKit
 
 class PersonsListViewController: UITableViewController {
     
-    var personList = Person.getPerson()
+    private let personList = Person.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
     
     //MARK: - Table view data source
@@ -21,9 +21,9 @@ class PersonsListViewController: UITableViewController {
         personList.count
     }
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        personList.count
-//    }
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        personList.count
+    //    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
@@ -37,22 +37,16 @@ class PersonsListViewController: UITableViewController {
     }
     
     //MARK: - navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let personInfoVC = segue.destination as? PersonInfoViewController
-//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-//        personInfoVC?.person = personList[indexPath.row]
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
-        viewControllers.forEach { viewController in
-            if let personInfoVC = viewController as? PersonInfoViewController {
+        viewControllers.forEach {
+            if let personInfoVC = $0 as? PersonInfoViewController {
                 personInfoVC.person = personList[indexPath.row]
-            } else if let personCatalogVC = viewController as? PersonCatalogViewController {
-                personCatalogVC.personCatalog = personList
+            } else if let personCatalogVC = $0 as? PersonCatalogViewController {
+                personCatalogVC.personList = personList
             }
         }
     }
