@@ -9,8 +9,8 @@ import UIKit
 
 class PersonsListViewController: UITableViewController {
 
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var surnameLabel: UILabel!
+//    @IBOutlet var nameLabel: UILabel!
+//    @IBOutlet var surnameLabel: UILabel!
     
     var personList = Person.getPerson()
     
@@ -34,6 +34,13 @@ class PersonsListViewController: UITableViewController {
         
         cell.contentConfiguration = content
         return cell
+    }
+    
+    //MARK: - navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let personInfoVC = segue.destination as? PersonInfoViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        personInfoVC?.person = personList[indexPath.row]
     }
 
 }
