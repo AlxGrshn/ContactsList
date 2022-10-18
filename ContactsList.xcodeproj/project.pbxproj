@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0827948828FF26E500CBD7C5 /* PersonCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827948728FF26E500CBD7C5 /* PersonCatalogViewController.swift */; };
 		08DBFF6028FF051D00A80CB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF5F28FF051D00A80CB8 /* AppDelegate.swift */; };
 		08DBFF6228FF051D00A80CB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF6128FF051D00A80CB8 /* SceneDelegate.swift */; };
 		08DBFF6728FF051D00A80CB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DBFF6528FF051D00A80CB8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0827948728FF26E500CBD7C5 /* PersonCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCatalogViewController.swift; sourceTree = "<group>"; };
 		08DBFF5C28FF051D00A80CB8 /* ContactsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DBFF5F28FF051D00A80CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DBFF6128FF051D00A80CB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				08DBFF7328FF056400A80CB8 /* PersonsListViewController.swift */,
 				08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */,
+				0827948728FF26E500CBD7C5 /* PersonCatalogViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DBFF6028FF051D00A80CB8 /* AppDelegate.swift in Sources */,
+				0827948828FF26E500CBD7C5 /* PersonCatalogViewController.swift in Sources */,
 				08DBFF8028FF078000A80CB8 /* PersonInfoViewController.swift in Sources */,
 				08DBFF7428FF056400A80CB8 /* PersonsListViewController.swift in Sources */,
 				08DBFF7628FF058B00A80CB8 /* Person.swift in Sources */,

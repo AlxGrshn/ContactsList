@@ -20,8 +20,5 @@ class PersonInfoViewController: UIViewController {
         fullNameLabel.text = person.fullName
         phoneLabel.text = "Phone: \(person.phoneNumber)"
         emailLabel.text = "Email: \(person.email)"
-
     }
-
-
 }

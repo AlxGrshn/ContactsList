@@ -18,12 +18,26 @@ struct Person {
     static func getPerson() -> [Person] {
         let data = DataStore()
         
-        return [Person(
+        return [
+            Person(
+            name: data.names.randomElement() ?? "",
+            surname: data.surnames.randomElement() ?? "",
+            phoneNumber: data.phoneNumbers.randomElement() ?? "",
+            email: data.emails.randomElement() ?? ""
+        ),
+            Person(
+            name: data.names.randomElement() ?? "",
+            surname: data.surnames.randomElement() ?? "",
+            phoneNumber: data.phoneNumbers.randomElement() ?? "",
+            email: data.emails.randomElement() ?? ""
+        ),
+            Person(
             name: data.names.randomElement() ?? "",
             surname: data.surnames.randomElement() ?? "",
             phoneNumber: data.phoneNumbers.randomElement() ?? "",
             email: data.emails.randomElement() ?? ""
         )
+            
         ]
     }
 }
