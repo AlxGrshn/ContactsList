@@ -13,7 +13,6 @@ class PersonsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     //MARK: - Table view data source
@@ -46,7 +45,7 @@ class PersonsListViewController: UITableViewController {
             if let personInfoVC = $0 as? PersonInfoViewController {
                 personInfoVC.person = personList[indexPath.row]
             } else if let personCatalogVC = $0 as? PersonCatalogViewController {
-                personCatalogVC.personList = personList
+                personCatalogVC.personsCatalog = personList
             }
         }
     }
