@@ -15,6 +15,7 @@
 		08DBFF7428FF056400A80CB8 /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7328FF056400A80CB8 /* PersonsListViewController.swift */; };
 		08DBFF7628FF058B00A80CB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7528FF058B00A80CB8 /* Person.swift */; };
 		08DBFF7828FF059C00A80CB8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7728FF059C00A80CB8 /* DataStore.swift */; };
+		08DBFF8028FF078000A80CB8 /* PersonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		08DBFF7328FF056400A80CB8 /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
 		08DBFF7528FF058B00A80CB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		08DBFF7728FF059C00A80CB8 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				08DBFF7328FF056400A80CB8 /* PersonsListViewController.swift */,
+				08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DBFF6028FF051D00A80CB8 /* AppDelegate.swift in Sources */,
+				08DBFF8028FF078000A80CB8 /* PersonInfoViewController.swift in Sources */,
 				08DBFF7428FF056400A80CB8 /* PersonsListViewController.swift in Sources */,
 				08DBFF7628FF058B00A80CB8 /* Person.swift in Sources */,
 				08DBFF7828FF059C00A80CB8 /* DataStore.swift in Sources */,
@@ -350,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +385,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
