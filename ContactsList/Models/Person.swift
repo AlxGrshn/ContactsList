@@ -17,27 +17,22 @@ struct Person {
     
     static func getPerson() -> [Person] {
         let data = DataStore()
+        var personsList: [Person] = []
         
-        return [
-            Person(
-            name: data.names.randomElement() ?? "",
-            surname: data.surnames.randomElement() ?? "",
-            phoneNumber: data.phoneNumbers.randomElement() ?? "",
-            email: data.emails.randomElement() ?? ""
-        ),
-            Person(
-            name: data.names.randomElement() ?? "",
-            surname: data.surnames.randomElement() ?? "",
-            phoneNumber: data.phoneNumbers.randomElement() ?? "",
-            email: data.emails.randomElement() ?? ""
-        ),
-            Person(
-            name: data.names.randomElement() ?? "",
-            surname: data.surnames.randomElement() ?? "",
-            phoneNumber: data.phoneNumbers.randomElement() ?? "",
-            email: data.emails.randomElement() ?? ""
-        )
-            
-        ]
+        let names = data.names.shuffled()
+        let surnames = data.surnames.shuffled()
+        let phones = data.phoneNumbers.shuffled()
+        let emails = data.emails.shuffled()
+        
+        for item in 0..<names.count {
+            let person = Person(
+                name: names[item],
+                surname: surnames[item],
+                phoneNumber: phones[item],
+                email: emails[item]
+            )
+            personsList.append(person)
+        }
+        return personsList
     }
 }

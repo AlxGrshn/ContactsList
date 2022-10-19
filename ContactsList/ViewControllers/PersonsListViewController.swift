@@ -33,4 +33,21 @@ class PersonsListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         personInfoVC.person = personsList[indexPath.row]
     }
+    
+    
+// Я не понял, как корректно передать данные на вторую вкладку, если использовать этот сегвей, то все крашится из-за nil
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+//        guard let viewControllers = tabBarVC.viewControllers else { return }
+//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//
+//        viewControllers.forEach {
+//            if let personInfoVC = $0 as? PersonInfoViewController {
+//                personInfoVC.person = personsList[indexPath.row]
+//            } else if let personsCatalogVC = $0 as? PersonsCatalogViewController {
+//                personsCatalogVC.personsCatalog = personsList
+//            }
+//        }
+//    }
 }
