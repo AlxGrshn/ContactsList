@@ -7,17 +7,15 @@
 
 import UIKit
 
-class PersonCatalogViewController: UITableViewController {
-   
+class PersonsCatalogViewController: UITableViewController {
+    
     var personsCatalog: [Person] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let personCatalogVC = tabBarController?.viewControllers?.first as? PersonCatalogViewController else { return }
-            personsCatalog = personCatalogVC.personsCatalog
-    }
 
+    }
+    
     //MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         personsCatalog.count
@@ -27,21 +25,18 @@ class PersonCatalogViewController: UITableViewController {
         2
     }
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        personCatalog[selection].title
-//    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        personsCatalog[section].fullName
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catalog", for: indexPath)
-        let person = personsCatalog[indexPath.row]
+        let person = personsCatalog[indexPath.section]
         var content = cell.defaultContentConfiguration()
         
-        content.text = person.phoneNumber
-        content.secondaryText = person.email
+        content.text = person.fullName
         
         cell.contentConfiguration = content
         return cell
     }
-
 }
-

@@ -18,9 +18,6 @@ class PersonInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let personInfoVC = tabBarController?.viewControllers?.first as? PersonInfoViewController else { return }
-            person = personInfoVC.person
-        
         fullNameLabel.text = person.fullName
         phoneLabel.text = "Phone: \(person.phoneNumber)"
         emailLabel.text = "Email: \(person.email)"
