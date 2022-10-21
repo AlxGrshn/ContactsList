@@ -24,12 +24,19 @@ struct Person {
         let phones = DataStore.shared.phoneNumbers.shuffled()
         let emails = DataStore.shared.emails.shuffled()
         
-        for item in 0..<names.count {
+        let iterationCount = min(
+            names.count,
+            surnames.count,
+            phones.count,
+            emails.count
+        )
+        
+        for index in 0..<iterationCount {
             let person = Person(
-                name: names[item],
-                surname: surnames[item],
-                phoneNumber: phones[item],
-                email: emails[item]
+                name: names[index],
+                surname: surnames[index],
+                phoneNumber: phones[index],
+                email: emails[index]
             )
             personsList.append(person)
         }

@@ -17,6 +17,7 @@
 		08DBFF7628FF058B00A80CB8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7528FF058B00A80CB8 /* Person.swift */; };
 		08DBFF7828FF059C00A80CB8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7728FF059C00A80CB8 /* DataStore.swift */; };
 		08DBFF8028FF078000A80CB8 /* PersonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */; };
+		08F268FF2902F03A0035B8B0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F268FE2902F03A0035B8B0 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		08DBFF7528FF058B00A80CB8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		08DBFF7728FF059C00A80CB8 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoViewController.swift; sourceTree = "<group>"; };
+		08F268FE2902F03A0035B8B0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				08DBFF7328FF056400A80CB8 /* PersonsListViewController.swift */,
 				08DBFF7F28FF078000A80CB8 /* PersonInfoViewController.swift */,
 				0827948728FF26E500CBD7C5 /* PersonsCatalogViewController.swift */,
+				08F268FE2902F03A0035B8B0 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F268FF2902F03A0035B8B0 /* TabBarViewController.swift in Sources */,
 				08DBFF6028FF051D00A80CB8 /* AppDelegate.swift in Sources */,
 				0827948828FF26E500CBD7C5 /* PersonsCatalogViewController.swift in Sources */,
 				08DBFF8028FF078000A80CB8 /* PersonInfoViewController.swift in Sources */,
