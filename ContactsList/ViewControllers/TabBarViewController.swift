@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController {
         
         let persons = Person.getPersonList()
         personListVC.personsList = persons
-        personsCatalogVC.personsCatalog = persons
+        personsCatalogVC.personsList = persons
     }
 
 }

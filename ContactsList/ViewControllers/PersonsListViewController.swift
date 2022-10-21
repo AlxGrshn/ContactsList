@@ -18,12 +18,13 @@ class PersonsListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "person", for: indexPath)
-        let person = personsList[indexPath.row]
         var content = cell.defaultContentConfiguration()
+        let person = personsList[indexPath.row]
+        
         
         content.text = person.fullName
-        
         cell.contentConfiguration = content
+        
         return cell
     }
     

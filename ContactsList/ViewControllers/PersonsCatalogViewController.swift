@@ -9,16 +9,11 @@ import UIKit
 
 class PersonsCatalogViewController: UITableViewController {
     
-    var personsCatalog: [Person] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    var personsList: [Person] = []
     
     //MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        personsCatalog.count
+        personsList.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,17 +21,30 @@ class PersonsCatalogViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        personsCatalog[section].fullName
+        personsList[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "catalog", for: indexPath)
-        let person = personsCatalog[indexPath.section]
+        
+        let person = personsList[indexPath.section]
         var content = cell.defaultContentConfiguration()
         
-        content.text = person.fullName
+        switch indexPath.row {
+        case 0:
+            content.text = person.phoneNumber
+            content.image = UIImage(systemName: Contacts.phone.rawValue)
+        default:
+            content.text = person.email
+            content.image = UIImage(systemName: Contacts.email.rawValue)
+        }
         
         cell.contentConfiguration = content
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
