@@ -15,14 +15,14 @@ struct Person {
         "\(name) \(surname)"
     }
     
-    static func getPerson() -> [Person] {
-        let data = DataStore()
+    static func getPersonList() -> [Person] {
+        
         var personsList: [Person] = []
         
-        let names = data.names.shuffled()
-        let surnames = data.surnames.shuffled()
-        let phones = data.phoneNumbers.shuffled()
-        let emails = data.emails.shuffled()
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let phones = DataStore.shared.phoneNumbers.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
         
         for item in 0..<names.count {
             let person = Person(
