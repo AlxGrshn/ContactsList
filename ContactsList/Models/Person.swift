@@ -6,6 +6,7 @@
 //
 
 struct Person {
+    
     let name: String
     let surname: String
     let phoneNumber: String
@@ -40,11 +41,15 @@ struct Person {
             )
             personsList.append(person)
         }
+        
         return personsList
+        
     }
 }
 
 enum Contacts: String {
+    
     case phone = "phone"
     case email = "tray"
+    
 }
